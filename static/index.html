@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/overrides.css?v=2">
 </head>
 <body>
   <div class="shell">
@@ -31,6 +32,7 @@
     <main>
       <header class="topbar"><div class="crumb">INBOX / <strong>OVERVIEW</strong></div><div class="top-actions"><span class="sync-status"><i></i> Live sync</span><button class="icon-btn" title="Notifications">♢</button><div class="profile">SM</div></div></header>
       <section class="content">
+        <div class="command-banner"><div><span class="banner-kicker">CASPIAN INBOX COMMAND</span><strong>Signal over noise.</strong><span>Every important message, one calm place to act.</span></div><span class="banner-status"><i></i> Gmail intelligence online</span></div>
         <div class="hero-row"><div><p class="eyebrow">MONDAY, 07 SEPTEMBER 2026</p><h1>Good morning, Sam<span class="sun">✦</span></h1><p class="subhead">Your inbox has <strong id="hero-count">2</strong> things that need your attention.</p></div><button id="connect-btn" class="primary-btn"><span>＋</span> Connect Gmail</button></div>
         <div class="metric-grid"><div class="metric-card accent"><span class="metric-label">NEEDS ATTENTION</span><strong id="attention-count">2</strong><small>across your inbox</small><div class="metric-glyph">!</div></div><div class="metric-card"><span class="metric-label">OPEN TASKS</span><strong id="open-count">2</strong><small>one due today</small><div class="mini-bars"><i></i><i></i><i></i><i></i></div></div><div class="metric-card"><span class="metric-label">PROCESSED TODAY</span><strong>18</strong><small>↑ 24% vs last week</small><div class="sparkline">╱╲╱╲╱╲╱</div></div><div class="metric-card"><span class="metric-label">AVG. RESPONSE</span><strong>1<span class="unit">h</span> 42<span class="unit">m</span></strong><small>↓ 18m this week</small><div class="clock">◷</div></div></div>
         <div class="section-heading" id="inbox"><div><h2>Priority inbox</h2><p>AI-ranked messages that may need a response or decision.</p></div><div class="filters"><button class="filter active">All <span id="all-filter">3</span></button><button class="filter">Needs reply <span>2</span></button><button class="filter">Unread <span>2</span></button></div></div>
