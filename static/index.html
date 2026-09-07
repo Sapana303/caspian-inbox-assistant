@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caspian Inbox Command</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">✳</span><span>caspian</span></div>
+      <div class="workspace-label">WORKSPACE</div>
+      <div class="workspace"><div class="avatar">SM</div><div><strong>Sam's command</strong><small>Personal workspace</small></div><span class="chevron">⌄</span></div>
+      <nav>
+        <a class="active" href="#inbox"><span>◈</span> Inbox <b id="nav-count">2</b></a>
+        <a href="#tasks"><span>✓</span> Tasks <b id="task-count">2</b></a>
+        <a href="#shortlist"><span>◎</span> Shortlist</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="workspace-label">CHANNELS</div>
+        <div class="channel"><i class="dot gmail"></i> Gmail <span class="connected">Connected</span></div>
+        <div class="channel muted"><i class="dot slack"></i> Slack <span>Coming soon</span></div>
+        <div class="channel muted"><i class="dot discord"></i> Discord <span>Coming soon</span></div>
+        <a class="settings" href="#settings"><span>⚙</span> Settings</a>
+      </div>
+    </aside>
+    <main>
+      <header class="topbar"><div class="crumb">INBOX / <strong>OVERVIEW</strong></div><div class="top-actions"><span class="sync-status"><i></i> Live sync</span><button class="icon-btn" title="Notifications">♢</button><div class="profile">SM</div></div></header>
+      <section class="content">
+        <div class="hero-row"><div><p class="eyebrow">MONDAY, 07 SEPTEMBER 2026</p><h1>Good morning, Sam<span class="sun">✦</span></h1><p class="subhead">Your inbox has <strong id="hero-count">2</strong> things that need your attention.</p></div><button id="connect-btn" class="primary-btn"><span>＋</span> Connect Gmail</button></div>
+        <div class="metric-grid"><div class="metric-card accent"><span class="metric-label">NEEDS ATTENTION</span><strong id="attention-count">2</strong><small>across your inbox</small><div class="metric-glyph">!</div></div><div class="metric-card"><span class="metric-label">OPEN TASKS</span><strong id="open-count">2</strong><small>one due today</small><div class="mini-bars"><i></i><i></i><i></i><i></i></div></div><div class="metric-card"><span class="metric-label">PROCESSED TODAY</span><strong>18</strong><small>↑ 24% vs last week</small><div class="sparkline">╱╲╱╲╱╲╱</div></div><div class="metric-card"><span class="metric-label">AVG. RESPONSE</span><strong>1<span class="unit">h</span> 42<span class="unit">m</span></strong><small>↓ 18m this week</small><div class="clock">◷</div></div></div>
+        <div class="section-heading" id="inbox"><div><h2>Priority inbox</h2><p>AI-ranked messages that may need a response or decision.</p></div><div class="filters"><button class="filter active">All <span id="all-filter">3</span></button><button class="filter">Needs reply <span>2</span></button><button class="filter">Unread <span>2</span></button></div></div>
+        <div class="main-grid"><div class="email-list" id="email-list"></div><aside class="right-rail"><div class="rail-heading"><h2>Today's focus</h2><span class="date-pill">SEP 07</span></div><div class="focus-item"><span class="focus-icon red">!</span><div><strong>Respond to Maya</strong><p>Final interview availability</p><small>Due today · Urgent</small></div></div><div class="focus-item"><span class="focus-icon yellow">◷</span><div><strong>Review shortlist</strong><p>6 backend candidates ready</p><small>Due Friday · High</small></div></div><div class="rail-divider"></div><div class="rail-heading"><h2>Agent activity</h2><span class="live-label">LIVE</span></div><div class="activity"><span class="activity-dot"></span><div><strong>Inbox scanned</strong><p>12 new messages classified</p><small>8 minutes ago</small></div></div><div class="activity"><span class="activity-dot"></span><div><strong>Task created</strong><p>“Review backend shortlist”</p><small>21 minutes ago</small></div></div><button class="ghost-btn" id="refresh-btn">↻ Refresh analysis</button></aside></div>
+        <section class="tasks-section" id="tasks"><div class="section-heading"><div><h2>Task queue</h2><p>Turn important mail into momentum.</p></div><button class="outline-btn" id="add-task-btn">＋ Add task</button></div><div class="task-table" id="task-list"></div></section>
+      </section>
+    </main>
+  </div>
+  <div class="modal hidden" id="email-modal"><div class="modal-card"><button class="close" id="close-modal">×</button><p class="eyebrow">MESSAGE DETAIL</p><h2 id="modal-subject"></h2><p class="modal-sender" id="modal-sender"></p><div class="modal-body" id="modal-body"></div><button class="primary-btn" id="modal-task">＋ Create task from email</button></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

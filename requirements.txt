@@ -1,0 +1,8 @@
+caspian-sdk
+openai-agents
+fastapi
+uvicorn[standard]
+python-dotenv
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
